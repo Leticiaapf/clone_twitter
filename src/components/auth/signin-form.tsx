@@ -1,6 +1,10 @@
 "use client"
 import{useRouter} from "next/navigation";
 import{useState} from "react";
+import { Input } from "../ui/input";
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 export const SigninForm = () => {
@@ -9,29 +13,38 @@ export const SigninForm = () => {
     const [passwordField, setPasswordField] = useState('');   // mesma logica da de cima
 
     const handleEnterButton = () => {
-        router.replace('/home');
+        router.replace('/home');  // página inicial
     }
  
     return (
 
 <>
 <div className="flex flex-col gap-4">
-<input
+<Input
  placeholder="Digite seu e-mail"
 value={emailField}
-onChange={e => setEmailField(e.target.value)}
+onChange={t => setEmailField(t)}
 
-></input>
 
-<input 
-type="password"
+
+/>
+
+
+  
+
+<Input
+
 placeholder="Digite sua senha"
 value={passwordField}
-onChange={e => setPasswordField(e.target.value)}
+onChange={t => setPasswordField(t)}
+password
+/>
 
-></input>
 
 <button onClick={handleEnterButton}>Entrar</button>
+
+
+
 </div>
 
 
