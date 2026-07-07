@@ -18,3 +18,4 @@ export const Logo = ({ size }: Props) => {
         </Link>
     );
 };
+
