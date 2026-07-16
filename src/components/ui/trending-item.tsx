@@ -1,15 +1,16 @@
 import Link from "next/link";
-
+// Tipo das propriedades que o componente TrendingItem espera receber
 type Props = {
 label: string;
 count: number;
 }
-
+// Componente que exibe um item individual da lista 
 export const TrendingItem = ({label, count}: Props) => {
-    return(
+    return( 
+        // Link do Next.js que redireciona para a página de busca ao clicar no item // encodeURIComponent garante que o termo da URL seja válido (trata espaços, acentos, etc.)
 <Link
 href={`/search?q=${encodeURIComponent(label)}`}
-className="group"
+className="group"  
 >
 <div className="group-hover:underline font-bold">{label}</div>
 <div className="text-sm text-gray-400">{count} posts</div>
