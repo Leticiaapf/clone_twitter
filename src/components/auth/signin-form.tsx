@@ -8,8 +8,6 @@ import { Button } from "../ui/button";
 
 
 
-
-
 export const SigninForm = () => {
     const router = useRouter();  // quando o cliente fizer o login vai mudar de tela
     const [emailField, setEmailField] = useState('');  //  guardar o email digitado, emailfield é o valor atual e o setemailfield e a funçao para atualizar esse valor
